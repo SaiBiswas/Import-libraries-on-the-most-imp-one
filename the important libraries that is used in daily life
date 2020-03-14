@@ -15,7 +15,22 @@ py.init_notebook_mode(connected=True)
 import plotly.graph_objs as go
 sns.set()
 
+import json
+import random
+from urllib.request import urlopen
 
+# storing and anaysis
+import numpy as np
+import pandas as pd
+
+# visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+import plotly.graph_objs as go
+import plotly.figure_factory as ff
+import calmap
+import folium
 
 
 
@@ -27,14 +42,7 @@ from sklearn.mixture import GaussianMixture
 from sklearn.model_selection import train_test_split
 
 
-
-
-import numpy as np # linear algebra
-import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-
 import json
-import numpy as np
-import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import imread
@@ -49,3 +57,24 @@ import os
 from sklearn.model_selection import train_test_split
 from scipy.optimize import minimize
 %matplotlib inline
+
+
+
+# color pallette
+cnf = '#393e46' # confirmed - grey
+dth = '#ff2e63' # death - red
+rec = '#21bf73' # recovered - cyan
+act = '#fe9801' # active case - yellow
+
+# converter
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()   
+
+# hide warnings
+import warnings
+warnings.filterwarnings('ignore')
+
+# html embedding
+from IPython.display import Javascript
+from IPython.core.display import display
+from IPython.core.display import HTML
