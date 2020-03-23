@@ -104,3 +104,15 @@ x = train['PAY_0']
 y = train['AGE']
 plt.scatter(x, y)
 plt.show()
+
+
+# we will analyze only the training set
+
+train['Item_Type'].value_counts(normalize = True)
+train['Item_Type'].value_counts().plot.bar()
+plt.title('Different types of item available in the store')
+plt.xlabel('Item')
+plt.ylabel('Number of Items')
+plt.show()
+
+
