@@ -57,6 +57,10 @@ import os
 from sklearn.model_selection import train_test_split
 from scipy.optimize import minimize
 %matplotlib inline
+import pandas_profiling as pp
+
+plt.style.use('fivethirtyeight')
+plt.rcParams['figure.figsize'] = (15, 8)
 
 
 
@@ -78,3 +82,25 @@ warnings.filterwarnings('ignore')
 from IPython.display import Javascript
 from IPython.core.display import display
 from IPython.core.display import HTML
+
+
+### checking the distribution of a single varible using dist plot
+plt.rcParams['figure.figsize'] = (15, 5)
+plt.subplot(1, 2, 1)
+sns.distplot(train['AGE'], color = 'purple')
+plt.title('AGE distribution')
+
+
+###  checking the distribution of a single variable using count plot
+plt.rcParams['figure.figsize'] = (15, 5)
+plt.subplot(1, 2, 1)
+sns.distplot(train['AGE'], color = 'purple')
+plt.title('AGE distribution')
+
+
+###scatter plot for the varible
+plt.rcParams['figure.figsize'] = (18, 5)
+x = train['PAY_0']
+y = train['AGE']
+plt.scatter(x, y)
+plt.show()
