@@ -116,3 +116,8 @@ plt.ylabel('Number of Items')
 plt.show()
 
 
+
+
+plt.subplot(1, 2, 1)
+sns.distplot(data['Item_MRP'], color = 'purple')
+plt.title('Item MRP')
